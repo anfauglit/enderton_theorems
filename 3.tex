@@ -1,0 +1,47 @@
+\documentclass[letterpaper, 10pt]{article}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{mathrsfs}
+
+\newtheorem{thm}{Theorem}[section]
+\numberwithin{thm}{section}
+\newtheorem{axiom}[thm]{Axiom}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{col}[thm]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{mydef}[thm]{Definition}
+
+\setlength\parindent{0pt}
+
+% Def new command for "less than or equal" relation
+\newcommand{\ineq}{%
+	\mathrel{\mkern1mu\underline{\mkern-1mu\in\mkern-1mu}\mkern1mu}}
+
+\newcommand{\opair}[2]{\langle{#1}, {#2} \rangle}
+\newcommand{\myset}[2]{\{{#1} \mid {#2}\}}
+
+\begin{document}
+
+\setcounter{section}{2}
+\section{Relations and Functions}
+
+\begin{mydef}
+	$\opair{x}{y}$ is defined to be ${{x},{x,y}}$.
+\end{mydef}
+
+\emph{Cartesian product} $A \times B$ of $A$ and $B$:
+\begin{equation}
+	A \times B = \myset{\opair{x}{y}}{x \in A \land y \in B}
+\end{equation}
+
+\begin{enumerate}[label=\arabic*.]
+	\item $A \times (B \cup C) = (A \times B) \cup (A \times C)$
+	\item If $A \times B = A \times C$ and $A \ne \emptyset$, then $B = C$
+	\item $A \times \bigcup\mathscr{B} = \bigcup\myset{A \times X}{X \in mathscr{B}}$
+\end{enumerate}
+
+\end{document}
