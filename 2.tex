@@ -1,0 +1,100 @@
+\documentclass[letterpaper, 10pt]{article}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{mathrsfs}
+
+\newtheorem{thm}{Theorem}[section]
+\numberwithin{thm}{section}
+\newtheorem{axiom}[thm]{Axiom}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{col}[thm]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{mydef}[thm]{Definition}
+
+\setlength\parindent{0pt}
+
+% Def new command for "less than or equal" relation
+\newcommand{\ineq}{%
+	\mathrel{\mkern1mu\underline{\mkern-1mu\in\mkern-1mu}\mkern1mu}}
+
+\begin{document}
+
+\section{Axioms and Operations}
+
+\begin{axiom}[Extensionality Axiom]
+	\begin{equation*}
+		\forall A\forall B[\forall x(x \in A \leftrightarrow x \in B)
+		\rightarrow A = B]
+	\end{equation*}
+\end{axiom}
+
+\begin{axiom}[Empty Set Axiom]
+	\begin{equation*}
+		\exists B \forall x \notin B
+	\end{equation*}
+\end{axiom}
+
+
+\begin{axiom}[Pairing Axiom]
+	\begin{equation*}
+		\forall u \forall v \exists B \forall x(x \in B \leftrightarrow 
+		x = u \lor x = v)
+	\end{equation*}
+\end{axiom}
+
+\begin{axiom}[Power Set Axiom]
+	\begin{equation*}
+		\forall a \exists B \forall x (x \in B \leftrightarrow x \subseteq a)
+	\end{equation*}
+\end{axiom}
+
+\begin{enumerate}[label=\arabic*.]
+	\item $\forall A \forall x \in A (x \subseteq \bigcup A)$
+	\item $A \subseteq B \rightarrow \bigcup A \subseteq \bigcup B$
+	\item $\forall x \in \mathcal{A} (x \subseteq B) \rightarrow \bigcup \mathcal{A}
+		\subseteq B$
+	\item $\bigcup\mathcal{P}A = A$
+	\item $A \subseteq \mathcal{P}\bigcup A$
+	\item $\mathcal{P}A \cap \mathcal{P}B = \mathcal{P}(A \cap B)$
+	\item $\mathcal{P}A \cup \mathcal{P}B \subseteq \mathcal{P}(A \cup B)$
+\end{enumerate}
+
+\emph{Commutative laws}
+\begin{gather*}
+	A \cup B = B \cup A \\
+	A \cap B = B \cap A
+\end{gather*}
+
+\emph{Associative laws}
+\begin{gather*}
+	A \cup (B \cup C) = (A \cup B) \cup C \\
+	A \cap (B \cap C) = (A \cap B) \cap C
+\end{gather*}
+
+\emph{Distributive laws}
+\begin{gather*}
+	A \cap (B \cup C) = (A \cap B) \cup (A \cap C) \\
+	A \cup (B \cap C) = (A \cup B) \cap (A \cup C) \\
+	A \cup \bigcap\mathscr{B} = \bigcap \{A \cup X \mid X \in \mathscr{B}\} \\
+	A \cap \bigcup\mathscr{B} = \bigcup \{A \cap X \mid X \in \mathscr{B}\}
+\end{gather*}
+
+\begin{gather*}
+	A \subseteq B \rightarrow C - B \subseteq C - A \\
+	x \in A + B \leftrightarrow x\in (A - B) \cup (B - A) \\
+	A \cap (B + C) = (A \cap B) + (A \cap C) \\
+	A + (B + C) = (A + B) + C \\
+	A \subseteq B \leftrightarrow A - B = \emptyset \leftrightarrow 
+		A \cup B = B \leftrightarrow A \cap B = A \\
+	\bigcup (A \cup B) = \bigcup A \cup \bigcup B \\
+	A \ne \emptyset \land B \ne \emptyset \quad \bigcap (A \cup B) =
+		\bigcap A \cap \bigcap B \\
+	\mathscr{A} \ne \emptyset \quad \mathscr{P}\bigcap\mathscr{A} =
+		\bigcap\{\mathscr{P}X \mid X \in \mathscr{A}\} \\
+	\bigcup\{\mathscr{P}X \mid X \in \mathscr{A}\} \subseteq 
+		\mathscr{P}\bigcup\mathscr{A}
+\end{document}
