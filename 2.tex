@@ -55,12 +55,12 @@
 \begin{enumerate}[label=\arabic*.]
 	\item $\forall A \forall x \in A (x \subseteq \bigcup A)$
 	\item $A \subseteq B \rightarrow \bigcup A \subseteq \bigcup B$
-	\item $\forall x \in \mathcal{A} (x \subseteq B) \rightarrow \bigcup \mathcal{A}
+	\item $\forall x \in \mathscr{A} (x \subseteq B) \rightarrow \bigcup \mathscr{A}
 		\subseteq B$
-	\item $\bigcup\mathcal{P}A = A$
-	\item $A \subseteq \mathcal{P}\bigcup A$
-	\item $\mathcal{P}A \cap \mathcal{P}B = \mathcal{P}(A \cap B)$
-	\item $\mathcal{P}A \cup \mathcal{P}B \subseteq \mathcal{P}(A \cup B)$
+	\item $\bigcup\mathscr{P}A = A$
+	\item $A \subseteq \mathscr{P}\bigcup A$
+	\item $\mathscr{P}A \cap \mathscr{P}B = \mathscr{P}(A \cap B)$
+	\item $\mathscr{P}A \cup \mathscr{P}B \subseteq \mathscr{P}(A \cup B)$
 \end{enumerate}
 
 \emph{Commutative laws}
@@ -83,18 +83,19 @@
 	A \cap \bigcup\mathscr{B} = \bigcup \{A \cap X \mid X \in \mathscr{B}\}
 \end{gather*}
 
-\begin{gather*}
-	A \subseteq B \rightarrow C - B \subseteq C - A \\
-	x \in A + B \leftrightarrow x\in (A - B) \cup (B - A) \\
-	A \cap (B + C) = (A \cap B) + (A \cap C) \\
-	A + (B + C) = (A + B) + C \\
-	A \subseteq B \leftrightarrow A - B = \emptyset \leftrightarrow 
-		A \cup B = B \leftrightarrow A \cap B = A \\
-	\bigcup (A \cup B) = \bigcup A \cup \bigcup B \\
-	A \ne \emptyset \land B \ne \emptyset \quad \bigcap (A \cup B) =
-		\bigcap A \cap \bigcap B \\
-	\mathscr{A} \ne \emptyset \quad \mathscr{P}\bigcap\mathscr{A} =
-		\bigcap\{\mathscr{P}X \mid X \in \mathscr{A}\} \\
-	\bigcup\{\mathscr{P}X \mid X \in \mathscr{A}\} \subseteq 
-		\mathscr{P}\bigcup\mathscr{A}
+\begin{enumerate}[label=\arabic*.]
+	\item $ A \subseteq B \implies C - B \subseteq C - A $
+	\item $ x \in A + B \iff x\in (A - B) \cup (B - A) $
+	\item $ A \cap (B + C) = (A \cap B) + (A \cap C) $
+	\item $ A + (B + C) = (A + B) + C  $
+	\item $ A \subseteq B \iff A - B = \emptyset \iff 
+		A \cup B = B \iff A \cap B = A  $
+	\item $ \bigcup (A \cup B) = \bigcup A \cup \bigcup B $
+	\item $ A \ne \emptyset \land B \ne \emptyset \quad \bigcap (A \cup B) =
+		\bigcap A \cap \bigcap B $
+	\item $ \mathscr{A} \ne \emptyset \quad \mathscr{P}\bigcap\mathscr{A} =
+		\bigcap\{\mathscr{P}X \mid X \in \mathscr{A}\} $
+	\item $ \bigcup\{\mathscr{P}X \mid X \in \mathscr{A}\} \subseteq 
+		\mathscr{P}\bigcup\mathscr{A} $
+\end{enumerate}
 \end{document}
