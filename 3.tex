@@ -28,6 +28,7 @@
 
 \setcounter{section}{2}
 \section{Relations and Functions}
+\subsection{Ordered Pairs}
 
 \begin{mydef}
 	$\opair{x}{y}$ is defined to be ${{x},{x,y}}$.
@@ -43,5 +44,53 @@
 	\item If $A \times B = A \times C$ and $A \ne \emptyset$, then $B = C$
 	\item $A \times \bigcup\mathscr{B} = \bigcup\myset{A \times X}{X \in mathscr{B}}$
 \end{enumerate}
+
+\subsection{Relations}
+\begin{mydef}
+	A \emph{realtion} is a set of ordered pairs.
+\end{mydef}
+
+\begin{mydef}
+	Define the \emph{domain} of $R$ (dom $R$), the \emph{range} of $R$ (ran
+	$R$), and the \emph{field} of $R$ (fld $R$) by
+	\begin{align*}
+		x \in dom(R) &\iff \exists y \opair{x}{y} \in R \\
+		x \in ran(R) &\iff \exists t \opair{t}{x} \in R \\
+		fld(R) &= dom(R) \cup ran(R)
+	\end{align*}
+\end{mydef}
+
+\begin{enumerate}
+	\item $dom(\bigcup \mathscr{A}) = \bigcup\myset{dom($R$)}{R \in
+	\mathscr{A}}
+	\item $ran(\bigcup \mathscr{A}) = \bigcup\myset{ran($R$)}{R \in
+	\mathscr{A}}
+\end{enumerate}
+
+\subsection{Functions}
+
+\begin{mydef}
+	A \emph{function} is a relation $F$ such that for each $x$ in $dom(F)$
+	there is only one $y$ such that $xFy$.
+\end{mydef}
+
+\begin{mydef}
+	\begin{enumerate}[label=(\alph*)]
+		\item The \emph{inverse} of $F$ is the set
+			\begin{equation*}
+				F^{-1} = \myset{\opair{u}{v}}{vFu}
+			\end{equation*}
+		\item The \emph{composition} of $F$ and $G$ is the set
+			\begin{equation*}
+				F \circ G = \myset{\opair{u}{v}}{\exists t (uGt \land tFv)}
+			\end{equation*}
+		\item The \emph{restriction} of $F$ to $A$ is the set
+			\begin{equation*}
+				F \restriction A = \myset{\opair{u}{v}}{uFv \land u \in A}
+			\end{equation*}
+		\item The \emph{image} of $A$ under $F$ is the set
+			\begin{equation*}
+				F[A] = \myset{v}{(\exists u \in A)uFv}
+			\end{equation*}
 
 \end{document}
